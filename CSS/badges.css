@@ -1,0 +1,106 @@
+/*
+  Badge cards / expandable items
+*/
+.badge {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 20px;
+    width: 290px;
+    max-width: 290px;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    border-radius: 16px;
+    background: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    box-shadow: 0 10px 24px rgba(2, 6, 23, 0.28);
+    color: #f1f5f9;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    margin-bottom: 0%;
+    margin-right: 5px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    animation: fadeUp 0.5s ease both;
+}
+
+#sbdgs {
+    width: fit-content;
+}
+
+.badge summary {
+    margin-top: 0%;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #f1f5f9;
+    font-family: 'Poppins', sans-serif;
+}
+
+.badge summary::-webkit-details-marker {
+    display: none;
+}
+
+.badge-content {
+    margin-top: 8px;
+    margin-bottom: 0%;
+    font-size: 14px;
+    color: #94a3b8;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.badge a {
+    color: #7dd3fc;
+}
+
+.badge a:hover {
+    color: #bae6fd;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.separator {
+    display: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+}
+
+.badge[open] .separator {
+    display: block;
+}
+
+.badge:hover {
+    transform: translateY(-4px);
+    border-color: rgba(56, 189, 248, 0.45);
+    box-shadow: 0 12px 28px rgba(2, 6, 23, 0.38);
+}
+
+.page-footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #94a3b8;
+    font-family: 'Inter', sans-serif;
+}
+
+
+@media (max-width: 768px) {
+    .badge {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}

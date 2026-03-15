@@ -1,0 +1,77 @@
+/*
+  Skills page quick return button
+*/
+.go-to-menu {
+    position: fixed;
+    right: clamp(10px, 2.5vw, 18px);
+    bottom: max(12px, env(safe-area-inset-bottom));
+    width: clamp(42px, 5vw, 48px);
+    height: clamp(42px, 5vw, 48px);
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--text-main);
+    border: 1px solid var(--surface-border);
+    text-decoration: none;
+    z-index: 1100;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.go-to-menu:hover {
+    transform: translateY(-3px);
+    background-color: rgba(56, 189, 248, 0.2);
+    border-color: rgba(56, 189, 248, 0.5);
+}
+
+.go-to-menu svg {
+    width: clamp(18px, 2.5vw, 22px);
+    height: clamp(18px, 2.5vw, 22px);
+}
+
+@media (max-width: 768px) {
+    .go-to-menu {
+        right: max(10px, env(safe-area-inset-right));
+        bottom: max(10px, env(safe-area-inset-bottom));
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 480px) {
+    .go-to-menu {
+        right: max(8px, env(safe-area-inset-right));
+        bottom: max(8px, env(safe-area-inset-bottom));
+        width: 40px;
+        height: 40px;
+    }
+
+    .go-to-menu svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .go-to-menu {
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    .go-to-menu:hover {
+        transform: none;
+    }
+}
+
+#skills-menu,
+#fswd,
+#top,
+#gd,
+#cmav,
+#ccasmm,
+#cc,
+#smm {
+    scroll-margin-top: 120px;
+}

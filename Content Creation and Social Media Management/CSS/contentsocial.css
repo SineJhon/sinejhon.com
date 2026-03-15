@@ -1,0 +1,417 @@
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --surface: rgba(15, 23, 42, 0.72);
+    --surface-border: rgba(148, 163, 184, 0.25);
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent: #38bdf8;
+    --shadow-soft: 0 10px 24px rgba(2, 6, 23, 0.28);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    background:
+        radial-gradient(circle at 14% 18%, rgba(56, 189, 248, 0.18) 0%, rgba(56, 189, 248, 0) 34%),
+        radial-gradient(circle at 82% 90%, rgba(14, 165, 233, 0.14) 0%, rgba(14, 165, 233, 0) 34%),
+        linear-gradient(155deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    padding: 110px 20px 40px;
+}
+
+.top-back-link {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--surface-border);
+    background: var(--surface);
+    color: #dbeafe;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.top-back-link:hover {
+    transform: translateX(-50%) translateY(-2px);
+    background: rgba(56, 189, 248, 0.18);
+    color: #f8fafc;
+}
+
+.intro-layout {
+    width: min(95vw, 1700px);
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.intro-card {
+    width: max(820px, 80%);
+    margin: 0 auto;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 28px;
+    box-shadow: 0 20px 40px rgba(2, 6, 23, 0.35);
+    min-height: 230px;
+    padding: 36px 28px 36px 124px;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    position: relative;
+    overflow: visible;
+}
+
+.profile-figure {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-35%);
+    margin: 0;
+}
+
+.profile-image {
+    width: 285px;
+    max-width: 38vw;
+    border-radius: 20px;
+    display: block;
+    filter: drop-shadow(0 22px 24px rgba(2, 6, 23, 0.45));
+    padding-left: 18px;
+}
+
+.intro-copy {
+    margin-left: 132px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.intro-label {
+    margin: 0;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.intro-name {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(30px, 3.4vw, 44px);
+    line-height: 1.15;
+}
+
+.intro-role {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: clamp(16px, 1.7vw, 21px);
+    line-height: 1.6;
+}
+
+.intro-brand {
+    margin: 0 0 0 auto;
+    width: 130px;
+    height: 130px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: rgba(2, 6, 23, 0.5);
+    box-shadow: 0 12px 24px rgba(2, 6, 23, 0.35);
+    flex-shrink: 0;
+}
+
+.intro-brand-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gear-section,
+.showcase-section {
+    width: 100%;
+    margin-top: 28px;
+}
+
+.gear-title,
+.showcase-title {
+    margin: 0 0 12px;
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(24px, 3vw, 32px);
+    line-height: 1.2;
+}
+
+.showcase-intro {
+    margin: 0 0 16px;
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.gear-badges {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.gear-badge,
+.channel-showcase-card {
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 18px;
+    box-shadow: var(--shadow-soft);
+    padding: 16px;
+}
+
+.gear-badge-label {
+    margin: 0 0 8px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.gear-badge-name {
+    margin: 0 0 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.gear-badge-text {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.channel-showcase-list {
+    display: grid;
+    gap: 18px;
+}
+
+.channel-showcase-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.channel-showcase-meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 8px;
+}
+
+.channel-logo-wrap {
+    width: 62px;
+    height: 62px;
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: rgba(2, 6, 23, 0.5);
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.channel-logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.channel-showcase-title {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(20px, 2.2vw, 28px);
+    line-height: 1.3;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.channel-showcase-meta .showcase-intro {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.channel-showcase-note {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.channel-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.channel-video-embed {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 1px solid rgba(148, 163, 184, 0.32);
+    border-radius: 12px;
+    background: rgba(2, 6, 23, 0.76);
+}
+
+.channel-actions {
+    margin-top: 14px;
+}
+
+.channel-see-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(56, 189, 248, 0.45);
+    background: rgba(15, 23, 42, 0.9);
+    color: #dbeafe;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.channel-see-more:hover {
+    transform: translateY(-2px);
+    background: rgba(56, 189, 248, 0.2);
+    color: #f8fafc;
+}
+
+.hire-me-section {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.hire-me-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 22px;
+    border-radius: 999px;
+    border: 1px solid rgba(56, 189, 248, 0.45);
+    background: rgba(15, 23, 42, 0.9);
+    color: #dbeafe;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.hire-me-button:hover {
+    transform: translateY(-2px);
+    background: rgba(56, 189, 248, 0.2);
+    color: #f8fafc;
+}
+
+.page-footer {
+    text-align: center;
+    margin-top: 34px;
+    font-size: 14px;
+    color: #94a3b8;
+    font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 1400px) {
+    .channel-videos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 980px) {
+    .intro-layout {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-inline: 4px;
+    }
+
+    body {
+        padding-top: 95px;
+    }
+
+    .intro-card {
+        width: 100%;
+        max-width: 100%;
+        min-height: 0;
+        padding: 28px 22px;
+        gap: 18px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-figure {
+        position: static;
+        transform: none;
+    }
+
+    .profile-image {
+        width: min(260px, 64vw);
+        max-width: none;
+        padding-left: 0;
+    }
+
+    .intro-copy {
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .intro-brand {
+        width: 110px;
+        height: 110px;
+        margin: 4px 0 0;
+    }
+
+    .gear-badges,
+    .channel-videos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .channel-showcase-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 560px) {
+    .top-back-link {
+        width: calc(100% - 24px);
+        top: 10px;
+        font-size: 15px;
+        padding: 11px 16px;
+    }
+
+    body {
+        padding: 80px 12px 24px;
+    }
+
+    .intro-layout {
+        padding-inline: 0;
+    }
+}

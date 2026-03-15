@@ -1,0 +1,22 @@
+.project-highlights li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+
+.project-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+    flex-shrink: 0;
+}
+
+.project-logo--contain {
+    object-fit: contain;
+    background-color: #ffffff;
+    padding: 2px;
+}
