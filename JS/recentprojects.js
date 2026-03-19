@@ -1,7 +1,7 @@
 (function () {
     var projectLinks = {
         exploreArbaMinch: 'https://example.com/explore-arba-minch',
-        hireportfolio: 'https://sinejhon.codes',
+        encouragementByEmpowerment: 'https://sinejhon.github.io/Encouragementbyempowerment/',
         gamoGiya: 'https://example.com/gamo-giya',
         graphicsSocial: '../Graphics Design/HTML/graphicsdesign.html',
         cameraCoverage: '../SY Creatives/HTML/sycreatives.html',
